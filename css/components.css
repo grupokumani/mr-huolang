@@ -1,0 +1,159 @@
+/* ==========================================================================
+   COMPONENTES BASE
+   ========================================================================== */
+
+/* ---- Botões ---- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-2);
+  padding: var(--sp-3) var(--sp-5);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--fs-md);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+.btn:active { transform: scale(0.97); }
+
+.btn-primary {
+  background: var(--hl-orange);
+  color: var(--hl-white);
+  box-shadow: var(--shadow-card);
+}
+.btn-primary:hover { background: var(--hl-orange-dark); }
+
+.btn-danger {
+  background: var(--hl-red);
+  color: var(--hl-white);
+}
+.btn-danger:hover { background: var(--hl-red-dark); }
+
+.btn-outline {
+  background: transparent;
+  color: var(--hl-ink);
+  border: 2px solid var(--hl-line);
+}
+.btn-outline:hover { border-color: var(--hl-orange); color: var(--hl-orange-dark); }
+
+.btn-block { width: 100%; }
+
+/* ---- Cartão genérico ---- */
+.card {
+  background: var(--hl-white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+
+/* ---- ETIQUETA DE PREÇO — elemento assinatura ----
+   Inspirado nas etiquetas físicas de loja moçambicana (visíveis nos
+   próprios cartazes promocionais do Mr. Houlang): forma de "bilhete"
+   com um recorte circular ("furo de suspensão"), sempre em laranja de
+   marca. Usado em todos os cartões de produto — é o elemento mais
+   reconhecível da interface. */
+.price-tag {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: var(--hl-orange);
+  color: var(--hl-white);
+  padding: var(--sp-2) var(--sp-3) var(--sp-2) var(--sp-4);
+  border-radius: 4px 12px 12px 4px;
+  font-family: var(--font-display);
+  line-height: 1.1;
+}
+.price-tag::before {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  background: var(--hl-cream);
+  border-radius: 50%;
+}
+.price-tag .price-tag__current {
+  font-size: var(--fs-lg);
+  font-weight: 700;
+}
+.price-tag .price-tag__unit {
+  font-size: var(--fs-xs);
+  font-weight: 400;
+  opacity: 0.9;
+}
+.price-tag--old {
+  background: none;
+  color: var(--hl-gray-500);
+  text-decoration: line-through;
+  padding: 0;
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+}
+
+/* Selo de desconto — canto do cartão de produto */
+.discount-badge {
+  position: absolute;
+  top: var(--sp-2);
+  right: var(--sp-2);
+  background: var(--hl-red);
+  color: var(--hl-white);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--fs-xs);
+  padding: 3px var(--sp-2);
+  border-radius: var(--radius-pill);
+  z-index: 2;
+}
+
+/* ---- Chip de categoria (scroll horizontal em mobile) ---- */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: var(--sp-2) var(--sp-4);
+  background: var(--hl-white);
+  border: 1px solid var(--hl-line);
+  border-radius: var(--radius-pill);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  white-space: nowrap;
+}
+.chip.is-active {
+  background: var(--hl-orange);
+  border-color: var(--hl-orange);
+  color: var(--hl-white);
+}
+
+/* ---- Badge de confiança / info ---- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  padding: 2px var(--sp-2);
+  border-radius: var(--radius-pill);
+  background: var(--hl-cream-deep);
+  color: var(--hl-ink-soft);
+}
+
+/* ---- Botão flutuante WhatsApp ---- */
+.whatsapp-fab {
+  position: fixed;
+  right: var(--sp-4);
+  bottom: var(--sp-4);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25D366;
+  color: var(--hl-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-float);
+  z-index: var(--z-cart-bar);
+}

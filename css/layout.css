@@ -1,0 +1,310 @@
+/* ==========================================================================
+   LAYOUT — header, hero, secções da homepage, footer
+   ========================================================================== */
+
+/* ---- Barra de topo (contacto/confiança, opcional, esconde em mobile) ---- */
+.topbar {
+  background: var(--hl-ink);
+  color: var(--hl-cream);
+  font-size: var(--fs-xs);
+  padding: 6px 0;
+  display: none;
+}
+.topbar .container { display: flex; justify-content: space-between; align-items: center; }
+@media (min-width: 768px) { .topbar { display: block; } }
+
+/* ---- Header ---- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-header);
+  background: var(--hl-white);
+  border-bottom: 3px solid var(--hl-orange);
+}
+.site-header .container {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  height: var(--header-h);
+}
+.brand { display: flex; align-items: center; gap: var(--sp-2); flex-shrink: 0; }
+.brand img { width: 40px; height: 40px; }
+.brand span {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--fs-md);
+  color: var(--hl-ink);
+  display: none;
+}
+@media (min-width: 640px) { .brand span { display: block; } }
+
+.header-search {
+  flex: 1;
+  position: relative;
+  display: none;
+}
+@media (min-width: 768px) { .header-search { display: block; } }
+.header-search input {
+  width: 100%;
+  padding: var(--sp-2) var(--sp-4) var(--sp-2) 40px;
+  border: 2px solid var(--hl-line);
+  border-radius: var(--radius-pill);
+  background: var(--hl-cream);
+}
+.header-search input:focus { border-color: var(--hl-orange); outline: none; }
+.header-search .icon-search {
+  position: absolute; left: 12px; top: 50%; transform: translateY(-50%);
+  opacity: .5; pointer-events: none;
+}
+
+.header-actions { display: flex; align-items: center; gap: var(--sp-2); margin-left: auto; }
+.icon-btn {
+  position: relative;
+  width: 44px; height: 44px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%;
+  color: var(--hl-ink);
+}
+.icon-btn:hover { background: var(--hl-cream-deep); }
+.cart-count {
+  position: absolute; top: 2px; right: 2px;
+  background: var(--hl-red); color: var(--hl-white);
+  font-size: 10px; font-weight: 700;
+  width: 17px; height: 17px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+}
+.store-pill {
+  display: none;
+  align-items: center; gap: 6px;
+  font-size: var(--fs-xs);
+  padding: 6px var(--sp-3);
+  border-radius: var(--radius-pill);
+  background: var(--hl-cream-deep);
+  white-space: nowrap;
+}
+@media (min-width: 1024px) { .store-pill { display: inline-flex; } }
+
+/* Pesquisa mobile: barra própria por baixo do header */
+.mobile-search { padding: var(--sp-2) 0; display: block; }
+@media (min-width: 768px) { .mobile-search { display: none; } }
+.mobile-search input {
+  width: 100%;
+  padding: var(--sp-3) var(--sp-4) var(--sp-3) 40px;
+  border: 2px solid var(--hl-line);
+  border-radius: var(--radius-pill);
+  background: var(--hl-cream);
+}
+
+/* ---- Hero ---- */
+.hero {
+  background: linear-gradient(135deg, var(--hl-red) 0%, #C4001F 100%);
+  color: var(--hl-white);
+  padding: var(--sp-6) 0;
+  position: relative;
+  overflow: hidden;
+}
+.hero .container { position: relative; z-index: 1; }
+.hero__eyebrow {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: rgba(255,255,255,.15);
+  padding: 4px var(--sp-3);
+  border-radius: var(--radius-pill);
+  font-size: var(--fs-xs); font-weight: 700;
+  margin-bottom: var(--sp-3);
+}
+.hero h1 {
+  color: var(--hl-white);
+  font-size: var(--fs-2xl);
+  max-width: 20ch;
+  margin-bottom: var(--sp-2);
+}
+@media (min-width: 768px) { .hero h1 { font-size: var(--fs-3xl); } }
+.hero p { max-width: 46ch; opacity: .92; margin-bottom: var(--sp-5); }
+.hero .btn-primary { background: var(--hl-white); color: var(--hl-red); }
+.hero .btn-primary:hover { background: var(--hl-cream); }
+.hero-countdown {
+  display: inline-flex; align-items: center; gap: var(--sp-2);
+  margin-top: var(--sp-5);
+  font-size: var(--fs-sm);
+  background: rgba(0,0,0,.18);
+  padding: var(--sp-2) var(--sp-4);
+  border-radius: var(--radius-pill);
+}
+.hero-countdown strong { font-family: var(--font-display); }
+
+/* ---- Secções genéricas ---- */
+.section { padding: var(--sp-6) 0; }
+.section-head {
+  display: flex; align-items: baseline; justify-content: space-between;
+  margin-bottom: var(--sp-4);
+  gap: var(--sp-3);
+}
+.section-head h2 { margin: 0; }
+.section-head a { font-size: var(--fs-sm); font-weight: 700; color: var(--hl-orange-dark); white-space: nowrap; }
+
+/* ---- Categorias (grelha de ícones tocáveis) ---- */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-3);
+}
+@media (min-width: 640px) { .category-grid { grid-template-columns: repeat(4, 1fr); } }
+@media (min-width: 1024px) { .category-grid { grid-template-columns: repeat(6, 1fr); } }
+.category-card {
+  display: flex; flex-direction: column; align-items: center; gap: var(--sp-2);
+  padding: var(--sp-4) var(--sp-2);
+  background: var(--hl-white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  text-align: center;
+  transition: transform .15s ease;
+}
+.category-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-float); }
+.category-card .emoji {
+  font-size: 1.5rem;
+  width: 48px; height: 48px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%;
+  background: var(--hl-orange-light);
+}
+.category-card span { font-size: var(--fs-xs); font-weight: 600; line-height: 1.2; }
+
+/* Chips scroll horizontal (usado em produtos filtrados, mobile) */
+.chip-scroll {
+  display: flex; gap: var(--sp-2);
+  overflow-x: auto;
+  padding-bottom: var(--sp-2);
+  scrollbar-width: none;
+}
+.chip-scroll::-webkit-scrollbar { display: none; }
+
+/* ---- Grelha de produtos ---- */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--sp-3);
+}
+@media (min-width: 640px) { .product-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 1024px) { .product-grid { grid-template-columns: repeat(4, 1fr); } }
+
+.product-card { position: relative; display: flex; flex-direction: column; border: 1px solid var(--hl-line); }
+.product-card__img-wrap {
+  position: relative;
+  aspect-ratio: 4/3;
+  background: var(--hl-cream-deep);
+  overflow: hidden;
+}
+.product-card__img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* Placeholder visual (sem texto) para produtos ainda sem foto real:
+   fundo em gradiente de marca + ícone grande da categoria.
+   Basta adicionar o caminho da foto em products.json (campo "imagem")
+   para o produto passar automaticamente a mostrar a foto real. */
+.product-card__placeholder {
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(145deg, var(--hl-orange-light) 0%, var(--hl-cream-deep) 100%);
+}
+.product-card__placeholder span {
+  font-size: 2.75rem;
+  opacity: .85;
+  filter: drop-shadow(0 2px 3px rgba(26,20,10,.12));
+}
+.product-card__body { padding: var(--sp-3); display: flex; flex-direction: column; gap: 6px; flex: 1; }
+.product-card__brand { font-size: var(--fs-xs); color: var(--hl-gray-500); }
+.product-card__name {
+  font-size: var(--fs-sm); font-weight: 600; line-height: 1.3;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+  min-height: 2.6em;
+}
+.product-card__prices { display: flex; align-items: baseline; gap: var(--sp-2); margin-top: auto; }
+.product-card__add {
+  position: absolute;
+  bottom: var(--sp-3); right: var(--sp-3);
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: var(--hl-orange);
+  color: var(--hl-white);
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: var(--shadow-card);
+  transition: transform .15s ease, background .15s ease;
+}
+.product-card__add:hover { background: var(--hl-orange-dark); transform: scale(1.06); }
+.product-card__add:active { transform: scale(0.92); }
+
+/* ---- Porque comprar no Mr. Houlang ---- */
+.trust-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-4);
+}
+@media (min-width: 768px) { .trust-grid { grid-template-columns: repeat(3, 1fr); } }
+.trust-item { display: flex; gap: var(--sp-3); align-items: flex-start; }
+.trust-item .icon {
+  width: 44px; height: 44px; flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--hl-orange-light);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.25rem;
+}
+.trust-item h3 { font-size: var(--fs-md); margin-bottom: 2px; }
+.trust-item p { font-size: var(--fs-sm); color: var(--hl-ink-soft); margin: 0; }
+
+/* ---- Loja / localização ---- */
+.store-card {
+  display: flex; flex-direction: column; gap: var(--sp-2);
+  padding: var(--sp-5);
+}
+@media (min-width: 640px) {
+  .store-card { flex-direction: row; align-items: center; justify-content: space-between; }
+}
+.store-card__info h3 { margin-bottom: var(--sp-1); }
+.store-card__info p { margin: 0 0 4px; font-size: var(--fs-sm); color: var(--hl-ink-soft); }
+.store-card__actions { display: flex; gap: var(--sp-2); flex-wrap: wrap; }
+
+/* ---- Footer ---- */
+.site-footer {
+  background: var(--hl-ink);
+  color: #D8D2CB;
+  padding: var(--sp-7) 0 var(--sp-8);
+  font-size: var(--fs-sm);
+}
+.footer-grid {
+  display: grid; grid-template-columns: 1fr; gap: var(--sp-6);
+}
+@media (min-width: 768px) { .footer-grid { grid-template-columns: 2fr 1fr 1fr 1fr; } }
+.footer-grid h4 { color: var(--hl-white); font-size: var(--fs-sm); margin-bottom: var(--sp-3); }
+.footer-grid ul li { margin-bottom: var(--sp-2); }
+.footer-grid a:hover { color: var(--hl-orange); }
+.footer-bottom {
+  margin-top: var(--sp-6);
+  padding-top: var(--sp-4);
+  border-top: 1px solid rgba(255,255,255,.1);
+  display: flex; flex-wrap: wrap; gap: var(--sp-3); justify-content: space-between;
+  font-size: var(--fs-xs);
+  color: var(--hl-gray-500);
+}
+
+/* ---- Barra fixa de carrinho (aparece só quando há itens) ---- */
+.cart-bar {
+  position: fixed; left: 0; right: 0; bottom: 0;
+  z-index: var(--z-cart-bar);
+  background: var(--hl-ink);
+  color: var(--hl-white);
+  padding: var(--sp-3) var(--sp-4);
+  display: none;
+  align-items: center; justify-content: space-between;
+  gap: var(--sp-3);
+  box-shadow: 0 -4px 16px rgba(0,0,0,.18);
+}
+.cart-bar.is-visible { display: flex; }
+.cart-bar__info { font-size: var(--fs-sm); }
+.cart-bar__info strong { font-family: var(--font-display); font-size: var(--fs-md); }
+
+/* Skip link para acessibilidade de teclado */
+.skip-link {
+  position: absolute; left: -999px; top: 0;
+  background: var(--hl-orange); color: white;
+  padding: var(--sp-2) var(--sp-4); z-index: var(--z-toast);
+}
+.skip-link:focus { left: var(--sp-3); top: var(--sp-3); }

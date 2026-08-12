@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-MZ">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mr. Houlang — Guia de Estilo (Fase 1)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/tokens.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/components.css">
+<style>
+  .section { padding: var(--sp-7) 0; border-bottom: 1px solid var(--hl-line); }
+  .swatch-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px,1fr)); gap: var(--sp-4); }
+  .swatch { border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-card); }
+  .swatch__color { height: 80px; }
+  .swatch__label { background: var(--hl-white); padding: var(--sp-2) var(--sp-3); font-size: var(--fs-xs); font-family: monospace; }
+  .type-row { margin-bottom: var(--sp-4); }
+  .btn-row { display: flex; flex-wrap: wrap; gap: var(--sp-3); align-items: center; }
+  .demo-header { display:flex; align-items:center; gap: var(--sp-3); padding: var(--sp-3) 0; }
+  .demo-logo { width: 48px; height: 48px; }
+  .grid-demo { display:grid; grid-template-columns: repeat(auto-fill,minmax(160px,1fr)); gap: var(--sp-4); }
+  .prod-card { position:relative; padding: var(--sp-3); }
+  .prod-card img { border-radius: var(--radius-sm); margin-bottom: var(--sp-2); background:var(--hl-cream-deep); height:110px; object-fit:contain; }
+  .eyebrow { text-transform:uppercase; letter-spacing:.08em; font-size:var(--fs-xs); font-weight:700; color:var(--hl-orange-dark); }
+</style>
+</head>
+<body>
+
+<header class="container demo-header">
+  <img class="demo-logo" src="../assets/logo/logo.svg" alt="Logótipo Mr. Houlang Supermercado">
+  <div>
+    <strong style="font-family:var(--font-display); font-size:var(--fs-md)">Mr. Houlang</strong><br>
+    <span class="badge">Fase 1 · Fundação visual</span>
+  </div>
+</header>
+
+<main class="container">
+
+  <section class="section">
+    <p class="eyebrow">Paleta oficial</p>
+    <h1>Cores da marca</h1>
+    <p>Extraídas directamente do logótipo e da página oficial de Facebook — não inventadas.</p>
+    <div class="swatch-grid">
+      <div class="swatch"><div class="swatch__color" style="background:var(--hl-orange)"></div><div class="swatch__label">--hl-orange<br>#FAA121</div></div>
+      <div class="swatch"><div class="swatch__color" style="background:var(--hl-orange-dark)"></div><div class="swatch__label">--hl-orange-dark<br>#C67023</div></div>
+      <div class="swatch"><div class="swatch__color" style="background:var(--hl-red)"></div><div class="swatch__label">--hl-red<br>#E5002E</div></div>
+      <div class="swatch"><div class="swatch__color" style="background:var(--hl-ink)"></div><div class="swatch__label">--hl-ink<br>#1A1A1A</div></div>
+      <div class="swatch"><div class="swatch__color" style="background:var(--hl-cream); border:1px solid var(--hl-line)"></div><div class="swatch__label">--hl-cream<br>#FFF8F0</div></div>
+      <div class="swatch"><div class="swatch__color" style="background:var(--hl-cream-deep)"></div><div class="swatch__label">--hl-cream-deep<br>#FCEFDC</div></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <p class="eyebrow">Tipografia</p>
+    <h1>Baloo 2 + Inter</h1>
+    <p>Baloo 2 (arredondada, robusta) para títulos e preços — o mesmo carácter "cartaz de loja" que a marca já usa nas promoções. Inter para texto corrido: extremamente legível em ecrãs pequenos e ligações lentas.</p>
+    <div class="type-row"><span style="font-family:var(--font-display); font-size:var(--fs-3xl); font-weight:800;">Ofertas da Semana</span></div>
+    <div class="type-row"><span style="font-family:var(--font-display); font-size:var(--fs-xl); font-weight:700;">Frutas & Legumes Frescos</span></div>
+    <div class="type-row"><span style="font-family:var(--font-body); font-size:var(--fs-base);">Arroz Bom Petisco 5kg — o preferido das famílias moçambicanas, agora com desconto especial esta semana em todas as lojas Mr. Houlang.</span></div>
+  </section>
+
+  <section class="section">
+    <p class="eyebrow">Elemento assinatura</p>
+    <h1>Etiqueta de preço</h1>
+    <p>Inspirada nas próprias etiquetas físicas de loja — usada em todos os cartões de produto do site.</p>
+    <div class="btn-row">
+      <span class="price-tag"><span class="price-tag__current">85 MT</span><span class="price-tag__unit">por kg</span></span>
+      <span class="price-tag--old">120 MT</span>
+      <span class="discount-badge" style="position:static">-30%</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <p class="eyebrow">Botões</p>
+    <h1>Acções</h1>
+    <div class="btn-row">
+      <button class="btn btn-primary">Adicionar ao carrinho</button>
+      <button class="btn btn-danger">Comprar agora</button>
+      <button class="btn btn-outline">Ver detalhes</button>
+    </div>
+  </section>
+
+  <section class="section">
+    <p class="eyebrow">Categorias</p>
+    <h1>Chips de navegação</h1>
+    <div class="btn-row">
+      <span class="chip is-active">🍎 Frutas e Legumes</span>
+      <span class="chip">🍗 Carnes</span>
+      <span class="chip">🐟 Peixe e Marisco</span>
+      <span class="chip">🥛 Lacticínios</span>
+      <span class="chip">🧴 Higiene</span>
+    </div>
+  </section>
+
+  <section class="section" style="border-bottom:none;">
+    <p class="eyebrow">Pré-visualização</p>
+    <h1>Cartão de produto (demo)</h1>
+    <div class="grid-demo">
+      <div class="card prod-card">
+        <span class="discount-badge">-15%</span>
+        <img src="https://placehold.co/200x150/FCEFDC/C67023?text=Produto" alt="">
+        <strong style="font-size:var(--fs-sm)">Arroz Bom Petisco 5kg</strong>
+        <div class="price-tag--old">150 MT</div>
+        <span class="price-tag" style="margin-top:4px"><span class="price-tag__current">127 MT</span></span>
+      </div>
+      <div class="card prod-card">
+        <img src="https://placehold.co/200x150/FCEFDC/C67023?text=Produto" alt="">
+        <strong style="font-size:var(--fs-sm)">Óleo Vegetal 750ml</strong>
+        <span class="price-tag" style="margin-top:4px"><span class="price-tag__current">95 MT</span></span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<a href="#" class="whatsapp-fab" aria-label="Contactar via WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.38 5.07L2 22l5.07-1.32A9.94 9.94 0 0012 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.6 0-3.1-.44-4.38-1.2l-.31-.19-3.01.78.8-2.93-.2-.32A7.94 7.94 0 014 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8zm4.32-5.68c-.24-.12-1.4-.69-1.62-.77-.22-.08-.38-.12-.53.12-.16.24-.61.77-.75.93-.14.16-.28.18-.51.06-.24-.12-1-.37-1.9-1.17-.7-.62-1.18-1.39-1.31-1.63-.14-.24-.01-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.53-1.28-.73-1.75-.19-.46-.39-.4-.53-.4-.14-.01-.3-.01-.46-.01s-.42.06-.64.3c-.22.24-.85.83-.85 2.03s.87 2.36.99 2.52c.12.16 1.71 2.61 4.14 3.66.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.4-.57 1.6-1.12.2-.55.2-1.02.14-1.12-.06-.1-.22-.16-.46-.28z"/></svg>
+</a>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+{
+  "_aviso": "DADOS DE DEMONSTRAÇÃO — produtos e preços de exemplo (baseados nos posts públicos da página de Facebook do Mr. Houlang), apenas para mostrar o funcionamento da plataforma. Substituir pelos dados reais e fotos reais dos produtos antes de produção (ver FASE 6 — Admin). Campo 'imagem' fica null enquanto não há foto real — o site mostra automaticamente um placeholder com o ícone da categoria. Assim que tiveres a foto, guarda-a em assets/products/<nome-do-ficheiro>.jpg e põe o caminho aqui, ex: 'assets/products/mesa-dobravel.jpg'.",
+
+  "categorias": [
+    { "id": "mobiliario",     "nome": "Mobiliário",            "icone": "🪑" },
+    { "id": "electrodomesticos","nome": "Electrodomésticos",   "icone": "🔌" },
+    { "id": "loica-cozinha",  "nome": "Loiça e Cozinha",        "icone": "🍽️" },
+    { "id": "decoracao",      "nome": "Decoração e Casa",       "icone": "🪔" },
+    { "id": "arrumacao",      "nome": "Arrumação e Plástico",   "icone": "🗃️" },
+    { "id": "limpeza",        "nome": "Limpeza",                "icone": "🧽" },
+    { "id": "banho-cama",     "nome": "Banho e Cama",           "icone": "🛏️" },
+    { "id": "brinquedos",     "nome": "Brinquedos",             "icone": "🧸" },
+    { "id": "bebe-crianca",   "nome": "Bebé e Criança",         "icone": "🍼" },
+    { "id": "malas-acessorios","nome": "Malas e Acessórios",    "icone": "👜" },
+    { "id": "jardim-exterior","nome": "Jardim e Exterior",      "icone": "🌿" },
+    { "id": "beleza-higiene", "nome": "Beleza e Higiene",       "icone": "🧴" }
+  ],
+
+  "produtos": [
+    { "id": "hl-001", "nome": "Mesa Dobrável de Jardim", "categoria": "mobiliario", "marca": "", "unidade": "unidade", "preco": 1999, "precoPromo": null, "destaque": "popular", "imagem": null, "activo": true },
+    { "id": "hl-002", "nome": "Cadeira Dobrável Reforçada", "categoria": "mobiliario", "marca": "", "unidade": "unidade", "preco": 1999, "precoPromo": null, "destaque": null, "imagem": null, "activo": true },
+    { "id": "hl-003", "nome": "Mesa de Piquenique Portátil", "categoria": "mobiliario", "marca": "", "unidade": "unidade", "preco": 2400, "precoPromo": 2160, "destaque": "oferta-semana", "imagem": null, "activo": true },
+    { "id": "hl-004", "nome": "Mesa Dobrável Compacta", "categoria": "mobiliario", "marca": "", "unidade": "unidade", "preco": 2600, "precoPromo": 2340, "destaque": "oferta-semana", "imagem": null, "activo": true },
+
+    { "id": "hl-005", "nome": "Secador de Cabelo Profissional", "categoria": "electrodomesticos", "marca": "", "unidade": "unidade", "preco": 480, "precoPromo": 432, "destaque": "oferta-semana", "imagem": null, "activo": true },
+    { "id": "hl-006", "nome": "Liquidificador Multifunções", "categoria": "electrodomesticos", "marca": "Sokany", "unidade": "unidade", "preco": 2775, "precoPromo": null, "destaque": "popular", "imagem": null, "activo": true },
+    { "id": "hl-007", "nome": "Liquidificador Compacto", "categoria": "electrodomesticos", "marca": "Sokany", "unidade": "unidade", "preco": 2050, "precoPromo": null, "destaque": null, "imagem": null, "activo": true },
+    { "id": "hl-008", "nome": "Batedeira Eléctrica 3 em 1", "categoria": "electrodomesticos", "marca": "", "unidade": "unidade", "preco": 2425, "precoPromo": 2183, "destaque": "oferta-semana", "imagem": null, "activo": true },
+    { "id": "hl-009", "nome": "Torradeira Eléctrica", "categoria": "electrodomesticos", "marca": "", "unidade": "unidade", "preco": 999, "precoPromo": null, "destaque": "popular", "imagem": null, "activo": true },
+    { "id": "hl-010", "nome": "Forno Eléctrico 3 em 1", "categoria": "electrodomesticos", "marca": "", "unidade": "unidade", "preco": 3985, "precoPromo": null, "destaque": null, "imagem": null, "activo": true },
+    { "id": "hl-011", "nome": "Candeeiro Solar de Exterior", "categoria": "jardim-exterior", "marca": "", "unidade": "unidade", "preco": 480, "precoPromo": null, "destaque": "popular", "imagem": null, "activo": true },
+
+    { "id": "hl-012", "nome": "Jarra Decorativa com Flores", "categoria": "decoracao", "marca": "", "unidade": "unidade", "preco": 480, "precoPromo": null, "destaque": null, "imagem": null, "activo": true },
+    { "id": "hl-013", "nome": "Candeeiro de Mesa Decorativo", "categoria": "decoracao", "marca": "", "unidade": "unidade", "preco": 2470, "precoPromo": null, "destaque": null, "imagem": null, "activo": true },
+
+    { "id": "hl-014", "nome": "Conjunto de Copos de Vinho", "categoria": "loica-cozinha", "marca": "", "unidade": "conjunto", "preco": 245, "precoPromo": 220, "destaque": "oferta-semana", "imagem": null, "activo": true },
+    { "id": "hl-015", "nome": "Dispensador de Bebidas", "categoria": "loica-cozinha", "marca": "", "unidade": "unidade", "preco": 235, "precoPromo": null, "destaque": null, "imagem": null, "activo": true },
+    { "id": "hl-016", "nome": "Prato Multifuncional", "categoria": "loica-cozinha", "marca": "", "unidade": "unidade", "preco": 155, "precoPromo": null, "destaque": null, "imagem": null, "activo": true },
+
+    { "id": "hl-017", "nome": "Caixa Organizadora Multiusos", "categoria": "arrumacao", "marca": "", "unidade": "unidade", "preco": 999, "precoPromo": null, "destaque": "popular", "imagem": null, "activo": true },
+    { "id": "hl-018", "nome": "Balde Multifuncional 2000", "categoria": "arrumacao", "marca": "", "unidade": "unidade", "preco": 2000, "precoPromo": null, "destaque": null, "imagem": null, "activo": true },
+    { "id": "hl-019", "nome": "Conjunto de Cestos de Arrumação", "categoria": "arrumacao", "marca": "", "unidade": "conjunto", "preco": 200, "precoPromo": null, "destaque": null, "imagem": null, "activo": true },
+    { "id": "hl-020", "nome": "Caixa de Arrumação Empilhável", "categoria": "arrumacao", "marca": "", "unidade": "unidade", "preco": 350, "precoPromo": 315, "destaque": "oferta-semana", "imagem": null, "activo": true },
+    { "id": "hl-021", "nome": "Cabide Organizador de Roupa", "categoria": "arrumacao", "marca": "", "unidade": "unidade", "preco": 100, "precoPromo": null, "destaque": "popular", "imagem": null, "activo": true },
+
+    { "id": "hl-022", "nome": "Balde e Esfregona Espremedora", "categoria": "limpeza", "marca": "", "unidade": "conjunto", "preco": 550, "precoPromo": null, "destaque": "popular", "imagem": null, "activo": true },
+    { "id": "hl-023", "nome": "Kit de Escovas Multifunções", "categoria": "limpeza", "marca": "", "unidade": "conjunto", "preco": 100, "precoPromo": null, "destaque": null, "imagem": null, "activo": true },
+
+    { "id": "hl-024", "nome": "Conjunto de Lençóis 2 Peças", "categoria": "banho-cama", "marca": "", "unidade": "conjunto", "preco": 350, "precoPromo": 315, "destaque": "oferta-semana", "imagem": null, "activo": true },
+    { "id": "hl-025", "nome": "Toalha de Banho Premium", "categoria": "banho-cama", "marca": "", "unidade": "unidade", "preco": 250, "precoPromo": null, "destaque": null, "imagem": null, "activo": true },
+
+    { "id": "hl-026", "nome": "Fantasia Infantil Super-Herói", "categoria": "brinquedos", "marca": "", "unidade": "unidade", "preco": 180, "precoPromo": null, "destaque": "popular", "imagem": null, "activo": true },
+    { "id": "hl-027", "nome": "Fantasia Infantil Princesa", "categoria": "brinquedos", "marca": "", "unidade": "unidade", "preco": 180, "precoPromo": null, "destaque": null, "imagem": null, "activo": true },
+
+    { "id": "hl-028", "nome": "Cadeira Portátil de Bebé", "categoria": "bebe-crianca", "marca": "", "unidade": "unidade", "preco": 1750, "precoPromo": null, "destaque": "popular", "imagem": null, "activo": true },
+    { "id": "hl-029", "nome": "Liquidificador Portátil para Bebé", "categoria": "bebe-crianca", "marca": "", "unidade": "unidade", "preco": 650, "precoPromo": 585, "destaque": "oferta-semana", "imagem": null, "activo": true },
+
+    { "id": "hl-030", "nome": "Mala de Viagem Reforçada", "categoria": "malas-acessorios", "marca": "", "unidade": "unidade", "preco": 1950, "precoPromo": null, "destaque": null, "imagem": null, "activo": true },
+    { "id": "hl-031", "nome": "Conjunto de Malas de Cosmética", "categoria": "malas-acessorios", "marca": "", "unidade": "conjunto", "preco": 850, "precoPromo": null, "destaque": "popular", "imagem": null, "activo": true },
+    { "id": "hl-032", "nome": "Mini Batedeira de Viagem", "categoria": "malas-acessorios", "marca": "", "unidade": "unidade", "preco": 495, "precoPromo": null, "destaque": null, "imagem": null, "activo": true }
+  ],
+
+  "lojas": [
+    {
+      "id": "loja-guerra-popular",
+      "nome": "Mr. Houlang — Av. Guerra Popular",
+      "endereco": "Avenida Guerra Popular Nr. 1128, Maputo, Moçambique",
+      "horario": "Seg–Sáb: 08:00–19:00 · Dom: 08:00–13:00",
+      "telefone": "+258 85 309 4145",
+      "whatsapp": "+258 87 987 8888",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Avenida+Guerra+Popular+Nr+1128+Maputo+Mozambique"
+    }
+  ]
+}
