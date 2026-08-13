@@ -32,6 +32,30 @@ function addToCart(produtoId, produto) {
   toast(`${produto.nome} adicionado ao carrinho`);
 }
 
+function removeFromCart(produtoId) {
+  const cart = getCart();
+  const produto = cart[produtoId];
+  delete cart[produtoId];
+  saveCart(cart);
+  if (produto) toast(`${produto.nome} removido do carrinho`);
+}
+
+function updateQty(produtoId, novaQtd) {
+  const cart = getCart();
+  if (!cart[produtoId]) return;
+  if (novaQtd <= 0) {
+    delete cart[produtoId];
+  } else {
+    cart[produtoId].qtd = novaQtd;
+  }
+  saveCart(cart);
+}
+
+function clearCart() {
+  localStorage.removeItem(CART_KEY);
+  updateCartUI();
+}
+
 function cartTotals() {
   const cart = getCart();
   let itens = 0, total = 0;
@@ -40,6 +64,35 @@ function cartTotals() {
     total += p.qtd * (p.precoPromo ?? p.preco);
   });
   return { itens, total };
+}
+
+/* ---------- Encomendas (Fase 3: guardadas no dispositivo — Fase 4 passa para o servidor) ---------- */
+const ORDERS_KEY = 'hl_orders_v1';
+const LAST_ORDER_KEY = 'hl_last_order_id';
+
+function generateOrderId() {
+  const d = new Date();
+  const ymd = d.toISOString().slice(0, 10).replace(/-/g, '');
+  const rand = Math.random().toString(36).slice(2, 6).toUpperCase();
+  return `MH-${ymd}-${rand}`;
+}
+
+function saveOrder(order) {
+  const orders = JSON.parse(localStorage.getItem(ORDERS_KEY) || '[]');
+  orders.push(order);
+  localStorage.setItem(ORDERS_KEY, JSON.stringify(orders));
+  localStorage.setItem(LAST_ORDER_KEY, order.id);
+  return order;
+}
+
+function getOrder(id) {
+  const orders = JSON.parse(localStorage.getItem(ORDERS_KEY) || '[]');
+  return orders.find(o => o.id === id) || null;
+}
+
+function getLastOrder() {
+  const id = localStorage.getItem(LAST_ORDER_KEY);
+  return id ? getOrder(id) : null;
 }
 
 function updateCartUI() {

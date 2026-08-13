@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" role="img" aria-label="Mr. Huolang">
+  <!-- Icone de carrinho de compras - cor de marca oficial #FF7900 -->
+  <circle cx="8" cy="21" r="1.6" fill="#FF7900"/>
+  <circle cx="19" cy="21" r="1.6" fill="#FF7900"/>
+  <path d="M2 2h2.4l2.72 13.6a2.4 2.4 0 0 0 2.36 1.93h8.6a2.4 2.4 0 0 0 2.35-1.9L22 9.2H6" 
+        fill="none" stroke="#FF7900" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
