@@ -297,6 +297,9 @@ document.addEventListener('DOMContentLoaded', () => {
   updateCartUI();
   const cd = document.getElementById('heroCountdown');
   if (cd) startCountdown(cd);
-  // "Continue a comprar" — só corre se a página tiver o contentor (todas têm, excepto a homepage completa)
-  renderContinueShopping('continueComprarGrid', { quantidade: 8 });
+ // "Continue a comprar" — só corre aqui se a página NÃO for a ficha de produto
+  // (produto.html usa o catalog.js para mostrar produtos da MESMA categoria)
+  if (!document.getElementById('produtoDetalhe')) {
+    renderContinueShopping('continueComprarGrid', { quantidade: 8 });
+  }
 });
