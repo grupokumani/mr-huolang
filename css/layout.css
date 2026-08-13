@@ -1,5 +1,5 @@
 /* ==========================================================================
-   LAYOUT — header, hero, secções da homepage, footer
+   LAYOUT — header, hero, seccoes da homepage, footer
    ========================================================================== */
 
 /* ---- Barra de topo (contacto/confianca, opcional, esconde em mobile) ---- */
@@ -97,7 +97,8 @@
 
 /* ---- Hero ---- */
 .hero {
-  background: linear-gradient(135deg, var(--hl-red) 0%, #C4001F 100%);
+  /* Identidade = laranja. O vermelho fica reservado a desconto/urgência/erro. */
+  background: linear-gradient(135deg, var(--hl-orange) 0%, var(--hl-orange-dark) 100%);
   color: var(--hl-white);
   padding: var(--sp-6) 0;
   position: relative;
@@ -120,7 +121,7 @@
 }
 @media (min-width: 768px) { .hero h1 { font-size: var(--fs-3xl); } }
 .hero p { max-width: 46ch; opacity: .92; margin-bottom: var(--sp-5); }
-.hero .btn-primary { background: var(--hl-white); color: var(--hl-red); }
+.hero .btn-primary { background: var(--hl-white); color: var(--hl-orange-dark); }
 .hero .btn-primary:hover { background: var(--hl-cream); }
 .hero-countdown {
   display: inline-flex; align-items: center; gap: var(--sp-2);
@@ -232,7 +233,7 @@
 .product-card__add:hover { background: var(--hl-orange-dark); transform: scale(1.06); }
 .product-card__add:active { transform: scale(0.92); }
 
-/* ---- Porque comprar no Mr. Houlang ---- */
+/* ---- Porque comprar no Mr. huolang ---- */
 .trust-grid {
   display: grid;
   grid-template-columns: 1fr;

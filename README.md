@@ -1,6 +1,6 @@
-# Mr. Houlang Supermercado — Plataforma Digital
+# Mr. huolang Supermercado — Plataforma Digital
 
-Website de e-commerce para o Mr. Houlang Supermercado (Av. Guerra Popular Nr. 1128, Maputo).
+Website de e-commerce para o Mr. huolang Supermercado (Av. Guerra Popular Nr. 1128, Maputo).
 Loja de utilidades para casa: mobiliário, electrodomésticos, loiça, decoração,
 arrumação, limpeza, brinquedos e artigos para bebé.
 
@@ -11,7 +11,7 @@ arrumação, limpeza, brinquedos e artigos para bebé.
 
 - [x] Estrutura de pastas completa (todas as páginas do site)
 - [x] Paleta de cores oficial (extraída da marca real), laranja como cor de destaque
-- [x] Sistema tipográfico (Baloo 2 + Inter)
+- [x] Sistema tipográfico (Helvetica + Arial)
 - [x] Componentes base (botões, cartões, etiqueta de preço, chips, placeholders visuais)
 - [x] Guia de estilo vivo (`docs/guia-de-estilo.html`)
 - [x] Header (desktop + mobile) com pesquisa e carrinho
@@ -34,7 +34,7 @@ arrumação, limpeza, brinquedos e artigos para bebé.
 ## Estrutura de pastas
 
 ```
-mr-houlang/
+mr-huolang/
 ├── index.html               → homepage
 ├── produtos.html             → catálogo completo (grelha + filtros — Fase 3)
 ├── produto.html              → ficha de produto individual (Fase 3)
@@ -103,9 +103,9 @@ Os browsers bloqueiam isto ao abrir `index.html` directamente por duplo-clique
 
 | Nome | Uso | Hex |
 |---|---|---|
-| Laranja Houlang | Cor principal, CTAs, preços, destaque | `#FAA121` |
+| Laranja Huolang oficial | Cor principal, CTAs, preços, destaque | `#FF7900` |
 | Laranja profundo | Hover, acentos | `#C67023` |
-| Vermelho Houlang | Promoções, desconto, urgência | `#E5002E` |
+| Vermelho huolang | Promoções, desconto, urgência | `#E5002E` |
 | Antracite | Texto | `#1A1A1A` |
 | Creme | Fundo | `#FFF8F0` |
 

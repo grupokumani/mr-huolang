@@ -1,15 +1,17 @@
 /* ==========================================================================
-   MR. HOULANG SUPERMERCADO — DESIGN TOKENS
-   Paleta extraída da marca real (logótipo + página oficial de Facebook).
+   MR. HUOLANG SUPERMERCADO — DESIGN TOKENS
+   Paleta extraída da marca real (logótipo oficial + página de Facebook).
    Não alterar estes valores sem rever a identidade em toda a plataforma.
    ========================================================================== */
 
 :root {
-  /* ---- Cor de marca ---- */
-  --hl-orange: #FAA121;        /* Laranja Houlang — cor principal */
-  --hl-orange-dark: #C67023;   /* Laranja profundo — hover, sombras, selo dourado */
-  --hl-orange-light: #FFD699;  /* Laranja claro — fundos suaves, badges */
-  --hl-red: #E5002E;           /* Vermelho Houlang — promoções, urgência, desconto */
+  /* ---- Cor de marca ----
+     Laranja extraído a pixel do logótipo oficial vectorizado (#FF7900,
+     ~95% dos pixels do fundo do lockup). Não substituir por outro tom. */
+  --hl-orange: #FF7900;        /* Laranja Huolang oficial — cor principal */
+  --hl-orange-dark: #B75700;   /* Laranja profundo — hover, sombras, selo dourado */
+  --hl-orange-light: #FFE8D3;  /* Laranja claro — fundos suaves, badges */
+  --hl-red: #E5002E;           /* Vermelho — SÓ para desconto/promoção/urgência/erro/remover, nunca como cor de identidade */
   --hl-red-dark: #B5001F;      /* Vermelho hover/pressed */
 
   /* ---- Neutros ---- */
@@ -28,21 +30,21 @@
   --hl-info: #2563EB;
 
   /* ---- Tipografia ----
-     Display: Baloo 2 — arredondada, robusta, com o mesmo carácter "cartaz de loja"
-     que a marca já usa nos posts promocionais (números grandes, bold, confiante).
-     Corpo: Inter — extremamente legível em ecrãs pequenos e ligações lentas,
-     com números tabulares para preços. */
-  --font-display: 'Baloo 2', system-ui, sans-serif;
-  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+     Primária: Helvetica — corpo de texto, limpa e extremamente legível.
+     Secundária: Arial — títulos e preços, robusta e comercial.
+     Ambas nativas do sistema operativo: zero pedidos ao Google Fonts,
+     zero atraso de carregamento, disponíveis em qualquer dispositivo. */
+  --font-body: Helvetica, Arial, sans-serif;
+  --font-display: Arial, Helvetica, sans-serif;
 
-  --fs-xs: 0.75rem;     /* 12px — legendas, termos */
-  --fs-sm: 0.875rem;    /* 14px — texto secundário */
-  --fs-base: 1rem;      /* 16px — corpo */
-  --fs-md: 1.125rem;    /* 18px */
-  --fs-lg: 1.375rem;    /* 22px — subtítulos */
-  --fs-xl: 1.75rem;     /* 28px — título de secção */
-  --fs-2xl: 2.25rem;    /* 36px — título hero mobile */
-  --fs-3xl: 3rem;       /* 48px — título hero desktop */
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-md: 1.125rem;
+  --fs-lg: 1.375rem;
+  --fs-xl: 1.75rem;
+  --fs-2xl: 2.25rem;
+  --fs-3xl: 3rem;
 
   /* ---- Espaçamento (escala 4px) ---- */
   --sp-1: 4px;
@@ -66,7 +68,7 @@
   /* ---- Layout ---- */
   --container-max: 1280px;
   --header-h: 64px;
-  --touch-min: 44px; /* alvo mínimo de toque, acessibilidade mobile */
+  --touch-min: 44px;
 
   /* ---- Camadas ---- */
   --z-header: 100;
