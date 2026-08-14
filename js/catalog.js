@@ -125,3 +125,55 @@ async function renderProdutoDetalhe() {
 }
 
 document.addEventListener('DOMContentLoaded', renderProdutoDetalhe);
+
+/* ---------- produtos.html — grelha com filtro por categoria/pesquisa ---------- */
+async function renderProdutosPage() {
+  const grid = document.getElementById('produtosGrid');
+  if (!grid) return; // esta página não tem grelha de produtos, não faz nada
+
+  const data = await loadCatalog();
+  const categoriaActiva = getQueryParam('categoria') || '';
+  const termoBusca = (getQueryParam('q') || '').trim().toLowerCase();
+
+  const chipsEl = document.getElementById('categoryChips');
+  if (chipsEl) {
+    const chips = [{ id: '', nome: 'Todas', icone: '🛍️' }, ...data.categorias];
+    chipsEl.innerHTML = chips.map(c => `
+      <a href="produtos.html${c.id ? `?categoria=${c.id}` : ''}"
+         class="chip${c.id === categoriaActiva ? ' is-active' : ''}">${c.nome}</a>`).join('');
+  }
+
+  const tituloEl = document.getElementById('produtosTitulo');
+  if (tituloEl) {
+    if (termoBusca) {
+      tituloEl.textContent = `Resultados para "${getQueryParam('q')}"`;
+    } else if (categoriaActiva) {
+      const cat = data.categorias.find(c => c.id === categoriaActiva);
+      tituloEl.textContent = cat ? cat.nome : 'Produtos';
+    } else {
+      tituloEl.textContent = 'Todos os Produtos';
+    }
+  }
+
+  let lista = data.produtos.filter(p => p.activo);
+  if (categoriaActiva) lista = lista.filter(p => p.categoria === categoriaActiva);
+  if (termoBusca) {
+    lista = lista.filter(p =>
+      p.nome.toLowerCase().includes(termoBusca) || (p.marca || '').toLowerCase().includes(termoBusca)
+    );
+  }
+
+  grid.innerHTML = lista.map(p => productCardHTML(p, data)).join('');
+
+  const vazioEl = document.getElementById('produtosVazio');
+  if (vazioEl) vazioEl.style.display = lista.length ? 'none' : 'block';
+
+  grid.querySelectorAll('[data-add]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const produto = data.produtos.find(p => p.id === btn.getAttribute('data-add'));
+      if (produto) addToCart(produto.id, produto);
+    });
+  });
+}
+
+document.addEventListener('DOMContentLoaded', renderProdutosPage);

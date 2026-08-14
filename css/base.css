@@ -1,5 +1,5 @@
 /* ==========================================================================
-   BASE — reset, tipografia, elementos fundamentais
+   BASE _ reset, tipografia, elementos fundamentais
    ========================================================================== */
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -43,7 +43,7 @@ button { cursor: pointer; border: none; background: none; }
 
 ul, ol { margin: 0; padding: 0; list-style: none; }
 
-/* Acessibilidade: foco visível sempre, nunca remover sem substituir */
+/* Acessibilidade: foco visivel sempre, nunca remover sem substituir */
 :focus-visible {
   outline: 3px solid var(--hl-info);
   outline-offset: 2px;
