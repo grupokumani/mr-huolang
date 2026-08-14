@@ -168,6 +168,7 @@
   border-radius: 50%;
   background: var(--hl-orange-light);
 }
+.category-card .emoji svg { color: var(--hl-orange-dark); }
 .category-card span { font-size: var(--fs-xs); font-weight: 600; line-height: 1.2; }
 
 /* Chips scroll horizontal (usado em produtos filtrados, mobile) */

@@ -169,10 +169,33 @@ function productCardHTML(p, catalogo) {
     </article>`;
 }
 
-function categoryCardHTML(c) {
+/* Ícones SVG de linha, 24x24, sem dependência externa — substituem os emojis
+   apenas na apresentação (data/products.json mantém-se intocado). */
+const CATEGORY_ICONS_SVG = {
+  'mobiliario': '<path d="M6 10V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v4"/><rect x="4" y="10" width="16" height="7" rx="1.5"/><path d="M5 17v2M19 17v2"/>',
+  'electrodomesticos': '<path d="M9 3v4M15 3v4"/><rect x="7" y="7" width="10" height="7" rx="2"/><path d="M12 14v4"/><path d="M9 21h6"/>',
+  'loica-cozinha': '<circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="3"/>',
+  'decoracao': '<path d="M9 3h6l2 6H7z"/><path d="M12 9v8"/><path d="M8 21h8"/><path d="M9 21c0-2 1.5-3 3-3s3 1 3 3"/>',
+  'arrumacao': '<path d="M3 8l9-4 9 4-9 4-9-4z"/><path d="M3 8v8l9 4 9-4V8"/><path d="M12 12v8"/>',
+  'limpeza': '<path d="M10 3h3v3h-3z"/><path d="M9 6h5l2 2-1 1H8l-1-1z"/><path d="M8 9h6v11a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1z"/><path d="M16 8l3-2M17 6l1 1M16 5l1 1"/>',
+  'banho-cama': '<path d="M3 18v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6"/><path d="M3 14h18"/><path d="M7 14v-3a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v3"/><path d="M3 18v2M21 18v2"/>',
+  'brinquedos': '<rect x="4" y="12" width="7" height="7" rx="1"/><rect x="13" y="12" width="7" height="7" rx="1"/><rect x="8.5" y="5" width="7" height="7" rx="1"/>',
+  'bebe-crianca': '<path d="M10 2h4v3h-4z"/><path d="M9 5h6l1 2-1 1H9L8 7z"/><path d="M8 8h8v11a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2z"/><path d="M8 13h8"/>',
+  'malas-acessorios': '<path d="M8 7V5a4 4 0 0 1 8 0v2"/><rect x="4" y="7" width="16" height="13" rx="2"/><path d="M4 12h16"/>',
+  'jardim-exterior': '<path d="M6 20C6 10 14 4 20 4c0 8-6 14-14 16z"/><path d="M6 20c2-4 5-7 9-9"/>',
+  'beleza-higiene': '<path d="M10 2h4v3h-4z"/><path d="M9 5h6l1 2v2H8V7z"/><path d="M8 9h8v11a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2z"/><path d="M12 13v5M9.5 15.5h5"/>',
+};
+
+function categoryIconSVG(c) {
+  const paths = CATEGORY_ICONS_SVG[c.id];
+  if (!paths) return `<span aria-hidden="true">${c.icone}</span>`; // recuo seguro
+  return `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths}</svg>`;
+}
+
+function category_icons_svg(c) {
   return `
     <a href="produtos.html?categoria=${c.id}" class="category-card tap-target">
-      <span class="emoji" aria-hidden="true">${c.icone}</span>
+      <span class="emoji">${categoryIconSVG(c)}</span>
       <span>${c.nome}</span>
     </a>`;
 }
@@ -223,7 +246,7 @@ async function renderHomepage() {
   const produtosActivos = data.produtos.filter(p => p.activo);
 
   const catGrid = document.getElementById('categoryGrid');
-  if (catGrid) catGrid.innerHTML = data.categorias.map(categoryCardHTML).join('');
+  if (catGrid) catGrid.innerHTML = data.categorias.map(category_icons_svg).join('');
 
   const ofertas = produtosActivos.filter(p => p.destaque === 'oferta-semana');
   const ofertasGrid = document.getElementById('ofertasGrid');
