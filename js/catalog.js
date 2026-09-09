@@ -68,8 +68,8 @@ function produtoDetalheHTML(produto, catalogo) {
         </div>
 
         <ul class="product-detail__trust">
-          <li>Disponível para levantamento na loja Guerra Popular</li>
-          <li>Pagamento por M-Pesa, e-Mola, mKesh ou na entrega</li>
+          <li>Disponível para levantamento no Mr. Huolang Supermercado.</li>
+          <li>Pagamento por M-Pesa, e-Mola, mKesh, cartão ou na entrega.</li>
           <li>Dúvidas? <a href="https://wa.me/258879878888" target="_blank" rel="noopener">Fale connosco no WhatsApp</a></li>
         </ul>
       </div>
