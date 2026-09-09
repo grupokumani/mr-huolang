@@ -1,6 +1,6 @@
-# Mr. huolang Supermercado — Plataforma Digital
+# Mr. Huolang Supermercado — Plataforma Digital
 
-Website de e-commerce para o Mr. huolang Supermercado (Av. Guerra Popular Nr. 1128, Maputo).
+Website de e-commerce para o Mr. Huolang Supermercado (Av. Guerra Popular Nr. 1128, Maputo).
 Loja de utilidades para casa: mobiliário, electrodomésticos, loiça, decoração,
 arrumação, limpeza, brinquedos e artigos para bebé.
 
@@ -34,7 +34,7 @@ arrumação, limpeza, brinquedos e artigos para bebé.
 ## Estrutura de pastas
 
 ```
-mr-huolang/
+mr-Huolang/
 ├── index.html               → homepage
 ├── produtos.html             → catálogo completo (grelha + filtros — Fase 3)
 ├── produto.html              → ficha de produto individual (Fase 3)
@@ -43,7 +43,7 @@ mr-huolang/
 ├── carrinho.html             → carrinho de compras (Fase 3)
 ├── checkout.html             → finalização de compra (Fase 3)
 ├── pedido-confirmado.html    → confirmação de pedido (Fase 3/4)
-├── sobre.html / lojas.html / contactos.html
+├── sobre.html /  / contactos.html
 ├── termos.html / privacidade.html / 404.html
 ├── assets/
 │   ├── logo/        → logótipo oficial
@@ -105,7 +105,7 @@ Os browsers bloqueiam isto ao abrir `index.html` directamente por duplo-clique
 |---|---|---|
 | Laranja Huolang oficial | Cor principal, CTAs, preços, destaque | `#FF7900` |
 | Laranja profundo | Hover, acentos | `#C67023` |
-| Vermelho huolang | Promoções, desconto, urgência | `#E5002E` |
+| Vermelho Huolang | Promoções, desconto, urgência | `#E5002E` |
 | Antracite | Texto | `#1A1A1A` |
 | Creme | Fundo | `#FFF8F0` |
 

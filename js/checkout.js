@@ -54,7 +54,7 @@ function renderCheckout() {
         </div>
         <div class="form-group">
           <label class="form-label" for="fTelefone">Telefone (WhatsApp) *</label>
-          <input class="form-input" type="tel" id="fTelefone" name="telefone" placeholder="8X XXX XXXX" required autocomplete="tel">
+          <input class="form-input" type="tel" id="fTelefone" name="telefone" placeholder="258" required autocomplete="tel">
         </div>
 
         <div class="form-group">
@@ -87,7 +87,7 @@ function renderCheckout() {
             <option value="cartao">Cartão</option>
           </select>
           <p style="font-size:var(--fs-xs); color:var(--hl-gray-500); margin-top:var(--sp-1);">
-            O pagamento é confirmado por telefone/WhatsApp após o pedido — a cobrança automática entra na Fase 5.
+            O pagamento é confirmado por telefone/WhatsApp após o pedido.
           </p>
         </div>
 

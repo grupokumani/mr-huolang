@@ -12,6 +12,8 @@
 }
 .topbar .container { display: flex; justify-content: space-between; align-items: center; }
 @media (min-width: 768px) { .topbar { display: block; } }
+.topbar a { color: inherit; text-decoration: none; }
+.topbar a:hover { text-decoration: underline; }
 
 /* ---- Header ---- */
 .site-header {
@@ -39,11 +41,12 @@
 @media (min-width: 640px) { .brand span { display: block; } }
 
 .header-search {
-  flex: 1;
+  flex: 0 1 420px;
+  min-width: 140px;
   position: relative;
-  display: none;
+  display: block;
 }
-@media (min-width: 768px) { .header-search { display: block; } }
+
 .header-search input {
   width: 100%;
   padding: var(--sp-2) var(--sp-4) var(--sp-2) 40px;
@@ -81,30 +84,55 @@
   border-radius: var(--radius-pill);
   background: var(--hl-cream-deep);
   white-space: nowrap;
+  color: inherit;
+  text-decoration: none;
 }
 @media (min-width: 1024px) { .store-pill { display: inline-flex; } }
 
-/* Pesquisa mobile: barra própria por baixo do header */
-.mobile-search { padding: var(--sp-2) 0; display: block; }
-@media (min-width: 768px) { .mobile-search { display: none; } }
-.mobile-search input {
-  width: 100%;
-  padding: var(--sp-3) var(--sp-4) var(--sp-3) 40px;
-  border: 2px solid var(--hl-line);
-  border-radius: var(--radius-pill);
-  background: var(--hl-cream);
-}
-
 /* ---- Hero ---- */
 .hero {
-  /* Identidade = laranja. O vermelho fica reservado a desconto/urgência/erro. */
-  background: linear-gradient(135deg, var(--hl-orange) 0%, var(--hl-orange-dark) 100%);
-  color: var(--hl-white);
-  padding: var(--sp-6) 0;
   position: relative;
   overflow: hidden;
+  min-height: 360px;
+  color: var(--hl-white);
+  /* cor de fundo enquanto as imagens carregam */
+  background: linear-gradient(135deg, var(--hl-orange) 0%, var(--hl-orange-dark) 100%);
 }
-.hero .container { position: relative; z-index: 1; }
+@media (min-width: 768px)  { .hero { min-height: 480px; } }
+@media (min-width: 1024px) { .hero { min-height: 560px; } }
+
+.hero-carousel { position: absolute; inset: 0; z-index: 0; }
+
+.hero-slide {
+  position: absolute; inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  will-change: opacity;
+  transition: opacity 1s ease;
+}
+.hero-slide.is-active { opacity: 1; z-index: 1; }
+
+.hero-overlay {
+  position: absolute; inset: 0;
+  z-index: 1;
+  background: linear-gradient(135deg, rgba(230,110,20,.78) 0%, rgba(120,45,10,.72) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  min-height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-block: var(--sp-6);
+  padding-inline: var(--sp-5);
+}
+@media (min-width: 768px)  { .hero-content { padding-inline: var(--sp-7); } }
+@media (min-width: 1024px) { .hero-content { padding-inline: var(--sp-8); } }
+
 .hero__eyebrow {
   display: inline-flex; align-items: center; gap: 6px;
   background: rgba(255,255,255,.15);
@@ -289,7 +317,7 @@
 }
 .product-detail__trust a { color: var(--hl-orange-dark); font-weight: 600; }
 
-/* ---- Porque comprar no Mr. huolang ---- */
+/* ---- Porque comprar no Mr. Huolang ---- */
 .trust-grid {
   display: grid;
   grid-template-columns: 1fr;

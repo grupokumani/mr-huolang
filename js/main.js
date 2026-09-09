@@ -272,6 +272,36 @@ async function renderHomepage() {
   updateCartUI();
 }
 
+/* ---------- Carrossel do hero (troca de imagem a cada 2s) ---------- */
+function initHeroCarousel() {
+  const slides = document.querySelectorAll('.hero-slide');
+  if (slides.length < 2) return;
+
+  // Extrai o URL de cada slide e pré-descodifica a imagem em memória.
+  // Isto evita o "corte"/tremor que acontece quando o browser só
+  // descodifica a imagem no momento exato da transição.
+  const urls = Array.from(slides).map(s => {
+    const match = getComputedStyle(s).backgroundImage.match(/url\(["']?(.*?)["']?\)/);
+    return match ? match[1] : null;
+  }).filter(Boolean);
+
+  const preloads = urls.map(url => {
+    const img = new Image();
+    img.src = url;
+    return img.decode ? img.decode().catch(() => {}) : Promise.resolve();
+  });
+
+  let current = 0;
+  function next() {
+    slides[current].classList.remove('is-active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('is-active');
+  }
+
+  // Só começa a trocar depois de todas as imagens estarem prontas
+  Promise.all(preloads).then(() => setInterval(next, 2000));
+}
+
 /* ---------- Contador de ofertas da semana ---------- */
 function startCountdown(el) {
   // Demo: termina sempre à meia-noite de domingo (hora local)
@@ -317,6 +347,7 @@ document.addEventListener('DOMContentLoaded', () => {
   renderHomepage();
   initMobileMenu();
   initSearch();
+  initHeroCarousel();
   updateCartUI();
   const cd = document.getElementById('heroCountdown');
   if (cd) startCountdown(cd);

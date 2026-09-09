@@ -1,5 +1,5 @@
 /* ==========================================================================
-   MR. HUOLANG — CATALOG.JS (Fase 3)
+   MR. Huolang — CATALOG.JS (Fase 3)
    Lógica específica de páginas que mostram UM produto a partir do catálogo:
    por agora, a ficha de produto (produto.html?id=hl-XXX).
    Depende das funções globais definidas em main.js (deve ser carregado
