@@ -1,16 +1,19 @@
 {
   "_aviso": "DADOS DE DEMONSTRAÇÃO — a maioria dos produtos e preços são exemplos (baseados nos posts públicos de Facebook do Mr. Huolang) para mostrar o funcionamento da plataforma. Os produtos hl-033 a hl-045 têm fotos REAIS enviadas pela loja, mas os PREÇOS são estimativas provisórias (campo \"precoConfirmado\": false) — substituir pelos preços reais antes de publicar. Campo 'imagem' fica null enquanto não há foto real — o site mostra automaticamente um placeholder com o ícone da categoria.",
   "categorias": [
-    { "id": "mobiliario", "nome": "Mobiliário",
-    { "id": "electrodomesticos", "nome": "Electrodomésticos",
-    { "id": "loica-cozinha", "nome": "Loiça e Cozinha",
-    { "id": "casa-decoracao", "nome": "Casa-Decoração",
-    { "id": "brinquedos", "nome": "Brinquedos",
-    { "id": "mercearia", "nome": "Mercearia",
-    { "id": "frescos", "nome": "Frescos",
-    { "id": "diversos", "nome": "Diversos"
+    { "id": "mobiliario", "nome": "Mobiliário", "icone": "🪑" },
+    { "id": "electrodomesticos", "nome": "Electrodomésticos", "icone": "🔌" },
+    { "id": "loica-cozinha", "nome": "Loiça e Cozinha", "icone": "🍽️" },
+    { "id": "decoracao", "nome": "Decoração e Casa", "icone": "🪔" },
+    { "id": "arrumacao", "nome": "Arrumação e Plástico", "icone": "🗃️" },
+    { "id": "limpeza", "nome": "Limpeza", "icone": "🧽" },
+    { "id": "banho-cama", "nome": "Banho e Cama", "icone": "🛏️" },
+    { "id": "brinquedos", "nome": "Brinquedos", "icone": "🧸" },
+    { "id": "bebe-crianca", "nome": "Bebé e Criança", "icone": "🍼" },
+    { "id": "malas-acessorios", "nome": "Malas e Acessórios", "icone": "👜" },
+    { "id": "jardim-exterior", "nome": "Jardim e Exterior", "icone": "🌿" },
+    { "id": "beleza-higiene", "nome": "Beleza e Higiene", "icone": "🧴" }
   ],
-
   "produtos": [
     { "id": "hl-001", "nome": "Mesa Dobrável de Jardim", "categoria": "mobiliario", "marca": "", "unidade": "unidade", "preco": 1999, "precoPromo": null, "destaque": "popular", "imagem": "assets/products/mesa-dobravel-redonda.jpeg", "activo": true },
     { "id": "hl-002", "nome": "Cadeira Dobrável Reforçada", "categoria": "mobiliario", "marca": "", "unidade": "unidade", "preco": 1999, "precoPromo": null, "destaque": null, "imagem": "assets/products/cadeira-dobravel-camping.jpg", "activo": true },
@@ -18,12 +21,12 @@
     { "id": "hl-004", "nome": "Mesa Dobrável Compacta", "categoria": "mobiliario", "marca": "", "unidade": "unidade", "preco": 2600, "precoPromo": 2340, "destaque": "oferta-semana", "imagem": "assets/products/mesinha-com-base.jpeg", "activo": true },
     { "id": "hl-005", "nome": "Secador de Cabelo Profissional", "categoria": "electrodomesticos", "marca": "", "unidade": "unidade", "preco": 480, "precoPromo": 432, "destaque": "oferta-semana", "imagem": "assets/products/pendurador.jpeg", "activo": true },
     { "id": "hl-006", "nome": "Liquidificador Multifuncional", "categoria": "electrodomesticos", "marca": "Sokany", "unidade": "unidade", "preco": 2775, "precoPromo": null, "destaque": "popular", "imagem": "assets/products/liquidificador-sokany.jpg", "activo": true },
-    { "id": "hl-007", "nome": "cestinho", "categoria": "diversos", "marca": "Sokany", "unidade": "unidade", "preco": 2050, "precoPromo": null, "destaque": null, "imagem": "assets/products/cestinho.jpeg", "activo": true },
+    { "id": "hl-007", "nome": "cestinho", "categoria": "arrumacao", "marca": "Sokany", "unidade": "unidade", "preco": 2050, "precoPromo": null, "destaque": null, "imagem": "assets/products/cestinho.jpeg", "activo": true },
     { "id": "hl-008", "nome": "Batedeira Eléctrica 3 em 1", "categoria": "electrodomesticos", "marca": "Jamaky", "unidade": "unidade", "preco": 2425, "precoPromo": 2183, "destaque": "oferta-semana", "imagem": "assets/products/batedeira-mao-jamaky.jpg", "activo": true },
     { "id": "hl-009", "nome": "Tostadeira Eléctrica", "categoria": "electrodomesticos", "marca": "", "unidade": "unidade", "preco": 999, "precoPromo": null, "destaque": "popular", "imagem": "assets/products/tostadeira.jpg", "activo": true },
     { "id": "hl-010", "nome": "Liquidificadora", "categoria": "electrodomesticos", "marca": "", "unidade": "unidade", "preco": 3985, "precoPromo": null, "destaque": null, "imagem": "assets/products/liquidificador.jpeg", "activo": true },
     { "id": "hl-011", "nome": "Pratinho de sopa", "categoria": "loica-cozinha", "marca": "", "unidade": "unidade", "preco": 480, "precoPromo": null, "destaque": "popular", "imagem": "assets/products/pratinhos-de-sopa.jpeg", "activo": true },
-    { "id": "hl-012", "nome": "Arrumador", "categoria": "diversos", "marca": "", "unidade": "unidade", "preco": 480, "precoPromo": null, "destaque": null, "imagem": "assets/products/arrumador.jpeg", "activo": true },
+    { "id": "hl-012", "nome": "Arrumador", "categoria": "arrumacao", "marca": "", "unidade": "unidade", "preco": 480, "precoPromo": null, "destaque": null, "imagem": "assets/products/arrumador.jpeg", "activo": true },
     { "id": "hl-013", "nome": "Prato Decorativo", "categoria": "decoracao", "marca": "", "unidade": "unidade", "preco": 2470, "precoPromo": null, "destaque": null, "imagem": "assets/products/decorativo.jpeg", "activo": true },
     { "id": "hl-014", "nome": "Conjunto de pratos", "categoria": "loica-cozinha", "marca": "", "unidade": "conjunto", "preco": 245, "precoPromo": 220, "destaque": "oferta-semana", "imagem": "assets/products/pratos.jpeg", "activo": true },
     { "id": "hl-015", "nome": "Jarra de Cristal", "categoria": "loica-cozinha", "marca": "", "unidade": "unidade", "preco": 235, "precoPromo": null, "destaque": null, "imagem": "assets/products/jarra-de-cristal.jpeg", "activo": true },
@@ -31,12 +34,12 @@
     { "id": "hl-017", "nome": "Jogo de chávenas", "categoria": "loica-cozinha", "marca": "", "unidade": "unidade", "preco": 999, "precoPromo": null, "destaque": "popular", "imagem": "assets/products/jogo-de-chavenas.jpeg", "activo": true },
     { "id": "hl-018", "nome": "Base de bolo", "categoria": "loica-cozinha", "marca": "", "unidade": "unidade", "preco": 2000, "precoPromo": null, "destaque": null, "imagem": "assets/products/base-de-bolo.jpeg", "activo": true },
     { "id": "hl-019", "nome": "Filtro de sumo", "categoria": "electrodomesticos", "marca": "", "unidade": "conjunto", "preco": 200, "precoPromo": null, "destaque": null, "imagem": "assets/products/filtro-de-sumo.jpeg", "activo": true },
-    { "id": "hl-020", "nome": "Armazenador multifuncional", "categoria": "diversos", "marca": "", "unidade": "unidade", "preco": 350, "precoPromo": 315, "destaque": "oferta-semana", "imagem": "assets/products/armazenador.jpeg", "activo": true },
-    { "id": "hl-021", "nome": "Armazenador de alimentos", "categoria": "diversos", "marca": "", "unidade": "unidade", "preco": 100, "precoPromo": null, "destaque": "popular", "imagem": "assets/products/armazenador-de-alimentos.jpeg", "activo": true },
-    { "id": "hl-022", "nome": "Jarra", "categoria": "diversos", "marca": "", "unidade": "conjunto", "preco": 550, "precoPromo": null, "destaque": "popular", "imagem": "assets/products/jarra.jpeg", "activo": true },
-    { "id": "hl-023", "nome": "Recipiente", "categoria": "diversos", "marca": "", "unidade": "conjunto", "preco": 100, "precoPromo": null, "destaque": null, "imagem": "assets/products/recipiente.jpeg", "activo": true },
+    { "id": "hl-020", "nome": "Armazenador multifuncional", "categoria": "arrumacao", "marca": "", "unidade": "unidade", "preco": 350, "precoPromo": 315, "destaque": "oferta-semana", "imagem": "assets/products/armazenador.jpeg", "activo": true },
+    { "id": "hl-021", "nome": "Armazenador de alimentos", "categoria": "arrumacao", "marca": "", "unidade": "unidade", "preco": 100, "precoPromo": null, "destaque": "popular", "imagem": "assets/products/armazenador-de-alimentos.jpeg", "activo": true },
+    { "id": "hl-022", "nome": "Jarra", "categoria": "limpeza", "marca": "", "unidade": "conjunto", "preco": 550, "precoPromo": null, "destaque": "popular", "imagem": "assets/products/jarra.jpeg", "activo": true },
+    { "id": "hl-023", "nome": "Recipiente", "categoria": "limpeza", "marca": "", "unidade": "conjunto", "preco": 100, "precoPromo": null, "destaque": null, "imagem": "assets/products/recipiente.jpeg", "activo": true },
     { "id": "hl-024", "nome": "Recipiente multifuncional", "categoria": "loica-cozinha", "marca": "", "unidade": "conjunto", "preco": 350, "precoPromo": 315, "destaque": "oferta-semana", "imagem": "assets/products/recipiente-multifuncional.jpeg", "activo": true },
-    { "id": "hl-025", "nome": "Toalha de Banho Premium", "categoria": "diversos", "marca": "", "unidade": "unidade", "preco": 250, "precoPromo": null, "destaque": null, "imagem": "assets/products/mimi-aquecedor.jpeg", "activo": true },
+    { "id": "hl-025", "nome": "Toalha de Banho Premium", "categoria": "banho-cama", "marca": "", "unidade": "unidade", "preco": 250, "precoPromo": null, "destaque": null, "imagem": "assets/products/mimi-aquecedor.jpeg", "activo": true },
     { "id": "hl-026", "nome": "Balança", "categoria": "loica-cozinha", "marca": "", "unidade": "unidade", "preco": 180, "precoPromo": null, "destaque": "popular", "imagem": "assets/products/balanca.jpeg", "activo": true },
     { "id": "hl-027", "nome": "Maquina", "categoria": "electrodomesticos", "marca": "", "unidade": "unidade", "preco": 180, "precoPromo": null, "destaque": null, "imagem": "assets/products/maquina.jpeg", "activo": true },
     { "id": "hl-028", "nome": "Mesinha de centro", "categoria": "mobiliario", "marca": "", "unidade": "unidade", "preco": 1750, "precoPromo": null, "destaque": "popular", "imagem": "assets/products/mesinha-de-centro.jpeg", "activo": true },
@@ -57,5 +60,16 @@
     { "id": "hl-043", "nome": "Ferro de Engomar a Seco", "categoria": "electrodomesticos", "marca": "Akane", "unidade": "unidade", "preco": 650, "precoPromo": null, "destaque": "popular", "imagem": "assets/products/ferro-engomar-akane.jpg", "activo": true, "precoConfirmado": false },
     { "id": "hl-044", "nome": "Máquina Eléctrica de Massa e Noodles", "categoria": "electrodomesticos", "marca": "Max Star", "unidade": "unidade", "preco": 3200, "precoPromo": null, "destaque": null, "imagem": "assets/products/maquina-massa-noodles.jpg", "activo": true, "precoConfirmado": false },
     { "id": "hl-045", "nome": "Balança Digital de Cozinha", "categoria": "electrodomesticos", "marca": "Bei-Chen", "unidade": "unidade", "preco": 1800, "precoPromo": null, "destaque": null, "imagem": "assets/products/balanca-digital-cozinha.jpg", "activo": true, "precoConfirmado": false }
+  ],
+  "lojas": [
+    {
+      "id": "loja-guerra-popular",
+      "nome": "Mr. Huolang — Av. Guerra Popular",
+      "endereco": "Avenida Guerra Popular Nr. 1128, Maputo, Moçambique",
+      "horario": "Seg–Sáb: 08:00–19:00 · Dom: 08:00–13:00",
+      "telefone": "+258 85 309 4145",
+      "whatsapp": "+258 87 987 8888",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Avenida+Guerra+Popular+Nr+1128+Maputo+Mozambique"
+    }
   ]
 }
